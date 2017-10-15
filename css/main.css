@@ -132,6 +132,8 @@ h1,h2{
     border-radius: 4px;
     color: #000;
     text-decoration: none;
+    width: 300px;
+    max-width: 90%;
 }
 .button:hover{
     color: inherit;

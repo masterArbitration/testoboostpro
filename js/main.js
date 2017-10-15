@@ -1,6 +1,7 @@
 var $count = $('#count');
 var $link = $('#link,#taget');
-var time = 7;
+var time = 6;
+var lench = 0;
 var id = setInterval(function () {
     console.log(time); //TODO: удали меня
     if (time <= 0) {
@@ -9,9 +10,14 @@ var id = setInterval(function () {
         $count.remove();
     } else {
         time--;
-        $count.text('('+time+')')
+        var str='';
+        for (var i = 0; i < lench % 4; i++) {
+            str += '.';
+        }
+        lench++;
+        $count.text(str)
     }
-}, 1000);
+}, 300);
 
 $link.click(function () {
     clearInterval(id);
